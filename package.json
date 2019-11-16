@@ -1,0 +1,27 @@
+{
+  "name": "express-file-download-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ponko2bunbun/express-file-download-api.git"
+  },
+  "author": {
+    "name": "ponko2bunbun"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ponko2bunbun/express-file-download-api/issues"
+  },
+  "homepage": "https://github.com/ponko2bunbun/express-file-download-api#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.2.0"
+  }
+}
