@@ -36,7 +36,7 @@ router.get('/', validateParam(), async (req, res) => {
     const contentTypes = getContentType(filenames[filenames.length - 1]);
     const headers = {
         'Content-Type': (contentTypes.length > 0) ? contentTypes[0].value : null,
-        'Content-Disposition': 'attachment; ' + req.query.file
+        'Content-Disposition': 'attachment; filename=' + req.query.file
     };
 
     res.set(headers).send(file);
