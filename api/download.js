@@ -24,7 +24,6 @@ router.get('/', validateParam(), async (req, res) => {
         return;
     }
 
-    const filenames = req.query.file.split('.');
     const filepath = path.join('static', req.query.file);
     const file = await fs.readFile(filepath)
     .catch((error) => {
@@ -33,6 +32,7 @@ router.get('/', validateParam(), async (req, res) => {
         return;
     });
 
+    const filenames = req.query.file.split('.');
     const contentTypes = getContentType(filenames[filenames.length - 1]);
     const headers = {
         'Access-Control-Allow-Origin': req.headers.origin,
