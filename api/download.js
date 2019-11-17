@@ -35,6 +35,10 @@ router.get('/', validateParam(), async (req, res) => {
 
     const contentTypes = getContentType(filenames[filenames.length - 1]);
     const headers = {
+        'Access-Control-Allow-Origin': req.headers.origin,
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Expose-Headers': 'Content-Disposition',
+        'Access-Control-Allow-Methods': 'GET',
         'Content-Type': (contentTypes.length > 0) ? contentTypes[0].value : null,
         'Content-Disposition': 'attachment; filename=' + req.query.file
     };
